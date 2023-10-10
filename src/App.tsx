@@ -1,7 +1,7 @@
 function App() {
   return (
     <>
-      <h1 className="text-3xl font-bold underline">Blood Bank</h1>
+      <h1>Blood Bank!</h1>
     </>
   );
 }

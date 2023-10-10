@@ -1,3 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Roboto", system-ui, sans-serif;
+  }
+  p {
+    @apply font-normal text-secondary-700 dark:text-secondary-400;
+  }
+  h1 {
+    @apply text-5xl text-secondary-900 font-extrabold dark:text-secondary-100;
+  }
+  h2 {
+    @apply text-4xl text-secondary-900 font-bold dark:text-secondary-100;
+  }
+  h3 {
+    @apply text-3xl text-secondary-900 font-bold dark:text-secondary-100;
+  }
+  h4 {
+    @apply text-2xl text-secondary-900 font-bold dark:text-secondary-100;
+  }
+  h5 {
+    @apply text-xl text-secondary-900 font-bold dark:text-secondary-100;
+  }
+  h6 {
+    @apply text-lg text-secondary-900 font-bold dark:text-secondary-100;
+  }
+}
