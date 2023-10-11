@@ -1,6 +1,8 @@
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import {MdOutlineDarkMode} from "react-icons/md";
+import {IoSettings} from "react-icons/io5";
+import Button from "../ui/button";
 
 const Navbar = () => {
   const [toggleDropdown, setToggleDropdown] = useState<boolean>(false);
@@ -32,20 +34,19 @@ const Navbar = () => {
           </span>
         </Link>
         <div className="flex items-center md:order-2 relative">
+          <Button size="sm" className="me-4">
+            Create Account
+          </Button>
           <button
             type="button"
             onClick={() => setToggleItems(!toggleItems)}
-            className="flex mr-3 text-sm bg-secondary-800 rounded-full md:mr-0 focus:ring-4 focus:ring-secondary-300 dark:focus:ring-secondary-600"
+            className="flex mr-3 text-sm rounded-full md:mr-0 focus:ring-4 focus:ring-secondary-300 dark:focus:ring-secondary-600"
             id="user-menu-button"
             aria-expanded="false"
             data-dropdown-toggle="user-dropdown"
             data-dropdown-placement="bottom">
             <span className="sr-only">Open user menu</span>
-            <img
-              className="w-8 h-8 rounded-full"
-              src="/docs/images/people/profile-picture-3.jpg"
-              alt="user photo"
-            />
+            <IoSettings className="w-7 h-7 rounded-full text-primary-700" />
           </button>
           {/* Dropdown menu */}
           <div
@@ -69,13 +70,7 @@ const Navbar = () => {
                   <MdOutlineDarkMode className="text-2xl" />
                 </a>
               </li>
-              <li>
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-sm text-secondary-700 hover:bg-secondary-100 dark:hover:bg-secondary-600 dark:text-secondary-200 dark:hover:text-secondary-50">
-                  Dashboard
-                </a>
-              </li>
+              {/*
               <li>
                 <a
                   href="#"
@@ -89,7 +84,7 @@ const Navbar = () => {
                   className="block px-4 py-2 text-sm text-secondary-700 hover:bg-secondary-100 dark:hover:bg-secondary-600 dark:text-secondary-200 dark:hover:text-secondary-50">
                   Sign out
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
           <button
